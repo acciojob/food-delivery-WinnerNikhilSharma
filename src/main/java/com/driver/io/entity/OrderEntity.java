@@ -6,7 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity(name = "orders")
 public class OrderEntity {
 
@@ -25,7 +29,7 @@ public class OrderEntity {
 
 	@Column(nullable = false)
 	private String userId;
-	
+
 	@Column(nullable = false)
 	private boolean status;
 
